@@ -1,0 +1,177 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+.animated-background {
+  background: linear-gradient(270deg, #f0f8ff, #ffe4e1, #f0f8ff);
+  background-size: 600% 600%;
+  animation: backgroundShift 20s ease infinite;
+  min-height: 100vh;
+}
+
+@keyframes backgroundShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.section {
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 16px;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.animation-wrapper {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.character {
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+  animation: runAcross 10s linear infinite;
+}
+
+.grizzy {
+  left: 0;
+  animation-delay: 0s;
+}
+
+.lemming {
+  left: 20%;
+  animation-delay: 2s;
+}
+
+@keyframes runAcross {
+  0% { left: -100px; }
+  100% { left: 110%; }
+}
+.dark-mode {
+  background: linear-gradient(270deg, #1c1c1c, #2e2e2e, #1c1c1c);
+  background-size: 600% 600%;
+  animation: backgroundShift 20s ease infinite;
+  min-height: 100vh;
+  color: #f0f0f0;
+}
+
+.dark-mode .glass {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  color: #f0f0f0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode a {
+  color: #89cfff;
+}
+.animation-wrapper {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  margin-top: 20px;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+}
+
+.character {
+  position: absolute;
+  bottom: 0;
+  height: 150px;
+  z-index: 10;
+}
+
+.grizzy {
+  animation: runGrizzy 8s linear infinite;
+  left: -200px;
+}
+
+.lemming {
+  animation: runLemming 8s linear infinite;
+  right: -200px;
+}
+
+@keyframes runGrizzy {
+  0% {
+    left: -200px;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: -200px;
+  }
+}
+
+@keyframes runLemming {
+  0% {
+    right: -200px;
+  }
+  50% {
+    right: 100%;
+  }
+  100% {
+    right: -200px;
+  }
+}
+/* App.css */
+
+.animated-background {
+  background: linear-gradient(-45deg, #f5f7fa, #c3cfe2, #a1c4fd, #d4fc79);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #000;
+  transition: all 0.4s ease;
+  min-height: 100vh;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.dark-mode {
+  background-color: #111;
+  color: #f5f5f5;
+  transition: all 0.4s ease;
+  min-height: 100vh;
+}
+.section ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+  color: inherit;
+}
+
+.section li {
+  margin-bottom: 1rem;
+}
+
+.section a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.section a:hover {
+  text-decoration: underline;
+}
+
+
+
