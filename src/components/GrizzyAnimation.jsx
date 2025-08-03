@@ -1,9 +1,9 @@
 import React from 'react';
-import '../App.css';
+import '../App.css'; // Assuming styles are still there
 
 const GrizzyAnimation = () => {
   return (
-    <div className="animation-wrapper">
+    <div className="global-animation-wrapper">
       <img
         src="/assets/grizzy.gif"
         alt="Grizzy"
@@ -15,7 +15,6 @@ const GrizzyAnimation = () => {
         className="character lemming"
       />
     </div>
-
   );
 };
 
